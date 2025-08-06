@@ -7,16 +7,7 @@ int main(){
     printf("Altezza triangolo: ");
     scanf("%d", &altezza);
 
-    for (int index = 1; index <= altezza; index++) {
-        
+    for (int index = altezza; index > 1; index--) {
+        for (int n_spazi = 1; n_spazi < )
     }
 }
-
-
-
-
-
-
-  *
- ***
-*****
