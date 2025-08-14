@@ -10,7 +10,7 @@ Modificate il programma broker.c della Sezione 5.2 applicando le seguenti modifi
 
 int main()
 {
-    float commission, value, numeroAzioni, prezzoAzione;
+    float commission, value, numeroAzioni, prezzoAzione, commissioneRivale;
     
     printf("Inserisci il numero di azioni: ");
     scanf("%f", &numeroAzioni);
@@ -35,8 +35,14 @@ int main()
 
     if (commission < 39.00f)
         commission = 39.00f;
+
+    if (numeroAzioni < 2000) 
+        commissioneRivale = 33.03f * numeroAzioni;
+    else
+        commissioneRivale = 33.02f * numeroAzioni;
     
-    printf("Commizzione: $%.2f\n", commission);
+    printf("Commissione: $%.2f\n", commission);
+    printf("Commissione rivale: $%.2f\n", commissioneRivale);
     
     return 0;
 }
