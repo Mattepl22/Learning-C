@@ -16,7 +16,7 @@ int main()
     int max = 0, max1 = 0, max2 = 0;
     
     printf("Inserisci 4 valori: ");
-    scanf("%d, %d, %d, %d", &a, &b, &c, &d);
+    scanf("%d %d %d %d", &a, &b, &c, &d);
 
     if (a < b) {
         min1 = a;
@@ -45,6 +45,9 @@ int main()
     } else {
         max = max2;
     }
+
+    printf("Massimo: %d\n", max);
+    printf("Minimo: %d\n", min);
 
     return 0;
 }
